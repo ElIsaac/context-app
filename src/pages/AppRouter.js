@@ -7,8 +7,9 @@ import { LoginScreen } from './LoginScreen'
 export const AppRouter = () => {
     return (
         <Router>
-            <div>
-                <NavBar/>
+            <NavBar/>
+            <div className="container">
+                
                 <Routes>
                     <Route exact path="/" element={<HomeScreen/>} />
                     <Route exact path="/login" element={<LoginScreen/>} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export const NavBar = () => {
     let location = useLocation();
@@ -15,9 +15,9 @@ export const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <Link className="nav-item nav-link active" to="/">Home </Link>
-                        <Link className="nav-item nav-link" to="/Login" >Login</Link>
-                        <Link className="nav-item nav-link" to="/About" >About</Link>
+                        <NavLink exact activeClassName="active" className="nav-item nav-link " to="/">Home </NavLink>
+                        <NavLink exact activeClassName="active" className="nav-item nav-link" to="/Login" >Login</NavLink>
+                        <NavLink exact activeClassName="active" className="nav-item nav-link" to="/About" >About</NavLink>
                     </div>
                 </div>
             </nav>

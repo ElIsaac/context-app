@@ -1,15 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React from 'react'
+import React, { useState } from 'react'
+import { UserContext } from './context/UserContext'
 
 import { AppRouter } from './pages/AppRouter'
 
 export const MainApp = () => {
+    const [user, setUser] = useState({})
     return (
-        <div className="container">
-            <h1>Main App</h1>
-            <hr/>
-            
-            <AppRouter/>
-        </div>
+            <UserContext.Provider value={{
+                user,
+                setUser
+                }}>
+                <AppRouter/>
+            </UserContext.Provider>
     )
 }
